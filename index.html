@@ -9,8 +9,8 @@
     width: 400px;
     height: 400px;
 
-    /* Apply the A shape as mask */
-    -webkit-mask-image: url('A.png');
+    /* STATIC MASK */
+    -webkit-mask-image: url('hero.png');
     -webkit-mask-size: contain;
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-position: center;
@@ -21,12 +21,22 @@
     mask-position: center;
 
     overflow: hidden;
+    background: transparent;
 }
 
 .logo-video video {
-    width: 100%;
-    height: 100%;
+    width: 160%;              /* 🔥 zoom in */
+    height: 160%;
     object-fit: cover;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%); /* center video */
+
+    opacity: 0.15;            /* very subtle */
+    filter: brightness(0.7) contrast(0.6); /* soften */
 }
     </style>
 </head>
