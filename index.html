@@ -8,6 +8,7 @@
         .logo-video {
     width: 400px;
     height: 400px;
+    position: relative; /* ✅ IMPORTANT */
 
     /* STATIC MASK */
     -webkit-mask-image: url('hero.png');
@@ -25,18 +26,18 @@
 }
 
 .logo-video video {
-    width: 160%;              /* 🔥 zoom in */
-    height: 160%;
-    object-fit: cover;
+    width: 140%;
+    height: 140%;
+    object-fit: contain;
 
     position: absolute;
     top: 50%;
     left: 50%;
 
-    transform: translate(-50%, -50%); /* center video */
+    transform: translate(-50%, -50%);
 
-    opacity: 0.15;            /* very subtle */
-    filter: brightness(0.7) contrast(0.6); /* soften */
+    opacity: 0.9; /* 🔥 increase visibility */
+    filter: brightness(0.9) contrast(0.9);
 }
     </style>
 </head>
